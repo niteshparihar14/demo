@@ -31,5 +31,9 @@ public abstract class UserDbService {
 	
 	abstract public List<Product> getProductByPriceAndCategoryAndBrand(final BigDecimal price,
 			final List<Integer> category, final String Brand, Pageable pageable);
+
+	abstract public Cart getCartById(Integer cartId);
+
+	public abstract void deleteProductFromCart(Cart cart);
 	
 }

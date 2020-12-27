@@ -10,4 +10,7 @@ import com.ecom.demo.db.model.Cart;
 @Repository
 public interface CartDao extends JpaRepository<Cart, Integer> {
 	public List<Cart> findCartByUserId(final Integer userId, Pageable pageable);
+
+	public Cart getCartById(Integer cartId);
+	
 }

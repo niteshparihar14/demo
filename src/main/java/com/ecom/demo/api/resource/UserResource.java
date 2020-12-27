@@ -188,4 +188,26 @@ public class UserResource {
 
 		return response;
 	}
+
+	public ResponseEntity deleteProductFromCart(User user, Integer cartId) {
+
+		if (user == null) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Response.code(ResponseCode.USER_DOESNT_EXIST));
+		}
+
+		Cart cart = userDbService.getCartById(cartId);
+
+		if (cart == null) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+					.body(Response.code(ResponseCode.PRODUCT_DOESNT_EXIST));
+		}
+
+		if (cart.getUser().getId() != user.getId()) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Response.code(ResponseCode.UNAUTHORIZED_USER));
+		}
+
+		userDbService.deleteProductFromCart(cart);
+
+		return ResponseEntity.status(HttpStatus.OK).body(Response.code(ResponseCode.PRODUCT_REMOVED));
+	}
 }

@@ -58,7 +58,8 @@ public class Response {
 		BAD_REQUEST(00, "Invalid request."), USER_DOESNT_EXIST(01, "User not exist."),
 		NOT_ADMIN_USER(02, "Not a admin user."), INVALID_PRODUCT_CATEGORY(03, "Invalid product category."),
 		PRODUCT_ADDED_TO_CART(04, "Product added to cart."),EMPTY_CART(05, "Cart is empty."),INVALID_CREDENTIAL(06, "Invalid Phone/Password."),
-		USER_NOT_ACTIVE(07, "User not active."),PRODUCT_DOESNT_EXIST(8, "Product not exist.");
+		USER_NOT_ACTIVE(07, "User not active."),PRODUCT_DOESNT_EXIST(8, "Product not exist."),UNAUTHORIZED_USER(9, "User unauthorized."),
+		PRODUCT_REMOVED(10, "Product removed from cart.");
 
 		private int code;
 		private String massage;

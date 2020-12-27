@@ -101,4 +101,14 @@ public class UserDbServiceImpl extends UserDbService {
 		return productDao.findAll(pageable).toList();
 	}
 
+	@Override
+	public Cart getCartById(Integer cartId) {
+		return cartDao.getCartById(cartId);
+	}
+
+	@Override
+	public void deleteProductFromCart(Cart cart) {
+		cartDao.delete(cart);
+	}
+
 }
