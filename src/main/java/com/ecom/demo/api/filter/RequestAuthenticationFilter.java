@@ -3,10 +3,12 @@ package com.ecom.demo.api.filter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,7 +19,6 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.ecom.demo.api.utils.ApplicationUtils;
-import com.ecom.demo.db.model.MyUser;
 import com.ecom.demo.db.model.User;
 import com.ecom.demo.db.service.MyUserDetailsService;
 import com.ecom.demo.db.service.UserDbService;

@@ -1,7 +1,6 @@
 package com.ecom.demo.common;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 public final class Constants {
