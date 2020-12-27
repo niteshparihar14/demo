@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ecom
+    username: root
+    password:
+server:
+  port : 8081 
